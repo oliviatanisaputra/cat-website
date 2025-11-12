@@ -88,8 +88,10 @@
 
 /* CatCardsSection Page */
 .catcard {
-  width: 450px;
-  height: 250px;
+  height: 25vh;
+  width: 75vh;
+  max-height: 30%;
+  max-width: 80%;
 
   flex-direction: row;
   align-content: center;
@@ -100,16 +102,23 @@
 }
 
 .catcard-img {
-  width: 150px;
-  height: 200px;
+  height: 100%;
+  width: 30%;
   border-radius: 8px;
   object-fit: cover;
   border: 5px solid #EAEBD0;
 }
 .catcard-info {
   margin-left: 2%;
-
   text-align: justify;
+}
+.catcard > h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.catcard > h3, p {
+  margin: 0;
+  padding: 0;
 }
 
 

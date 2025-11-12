@@ -20,7 +20,11 @@ h2 {
   color: #242424;
 }
 
+
 button {
+  /* max-height: 30%;
+  max-width: 90%; */
+
   border-radius: 8px;
   border: none;
   

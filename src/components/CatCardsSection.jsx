@@ -10,7 +10,7 @@ const CatCardsSection = () => {
             id: 1,
             name: "치즈",
             location: "blabla",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
             img: img1
         },
         {
