@@ -4,6 +4,7 @@ import CatCardsSection from './components/CatCardsSection.jsx'
 import CatDictionarySection from './components/CatDictionarySection.jsx'
 import EmergencySection from './components/EmergencySection.jsx'
 import Home from './components/Home.jsx'
+import './home64.png'
 
 function App() {
   // Setting the view or display. Choices: 'home', 'catcards', 'dictionary', 'emergency'
@@ -31,10 +32,10 @@ function App() {
       <header className="nav">
         {view !== 'home' ? (
         // If the view is not 'home' (if it is true(?)), make a button to go back to 'home' (the previous page).
-          <button onClick={() => setView('home')}></button>
+          <button onClick={() => setView('home')} className="homebutton"><img src="./home64.png" alt="" /></button>
         ) : (
         // (If it is false(:)) if the view is 'home', just fill up the button with an empty space.
-          <div></div>
+          <div className="homebutton"></div>
         )}
       <h1 className="navtitle">동서대 고양이</h1>
       </header>

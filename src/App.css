@@ -22,22 +22,43 @@
 }
 
 
-
-
 /* Navigation Bar */
 .nav {
   padding: 1rem;
   margin: 0;
 
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
 
   background-color: #A4B787;
   color: #F4F4F4;
-  text-align: center;
   line-height: 1.1;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.homebutton {
+  position: fixed;
+  top: 6vh;
+  left: 6vw;
+
+  width: 30pt;
+  height: 30pt;
+  border-radius: 50%;
+
+  background-image: url("./home64.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .homebutton > img {
+} */
+
+
+.navtitle {
+  align-self: center;
+  text-align: center;
 }
 
 
