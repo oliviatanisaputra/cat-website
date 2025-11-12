@@ -4,6 +4,7 @@ import CatCardsSection from './components/CatCardsSection.jsx'
 import CatDictionarySection from './components/CatDictionarySection.jsx'
 import EmergencySection from './components/EmergencySection.jsx'
 import Home from './components/Home.jsx'
+import icon from './assets/cat-icon.png'
 
 function App() {
   // Setting the view or display. Choices: 'home', 'catcards', 'dictionary', 'emergency'
@@ -36,7 +37,7 @@ function App() {
         // (If it is false(:)) if the view is 'home', just fill up the button with an empty space.
           <div ></div>
         )}
-      <h1 className="navtitle">동서대 고양이</h1>
+      <h1 className="navtitle">동서대 고양이</h1><img src={icon} alt="cat icon" />
       </header>
 
       <main>

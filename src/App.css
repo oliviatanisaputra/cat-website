@@ -27,8 +27,9 @@
   padding: 1vh;
   margin: 0;
 
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   background-color: #A4B787;
   color: #F4F4F4;
@@ -39,11 +40,11 @@
 .homebutton {
   /* z-index: 1000; */
   position: absolute;
-  top: 3vh;
-  left: 3vw;
+  top: 4vh;
+  left: 4vw;
   
-  width: 30pt;
-  height: 30pt;
+  width: 40pt;
+  height: 40pt;
   background-color: #EAEBD0;
   border-radius: 50%;
   
@@ -56,6 +57,10 @@
 .navtitle {
   align-self: center;
   text-align: center;
+}
+.nav > img {
+  width: 30pt;
+  height: 30pt;
 }
 
 
@@ -74,28 +79,34 @@
   margin: 1rem;
   width: 70vw;
   height: auto;
+
+  background-color: #DA6C6C;
+  color: #F4F4F4;
 }
 
 
 
 /* CatCardsSection Page */
 .catcard {
-  max-width: 500px;
+  width: 450px;
+  height: 250px;
 
   flex-direction: row;
   align-content: center;
   align-items: center;
+  
+  background-color: #DA6C6C;
+  color: #F4F4F4;
 }
 
 .catcard-img {
-  width: 7rem;
-  height: 9rem;
+  width: 150px;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
-  border: 5px solid #DA6C6C;
+  border: 5px solid #EAEBD0;
 }
 .catcard-info {
-  flex: 1;
   margin-left: 2%;
 
   text-align: justify;
