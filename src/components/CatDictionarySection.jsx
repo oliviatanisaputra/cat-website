@@ -28,7 +28,7 @@ const CatDictionarySection = () => {
                     <div className="card">
                         <button onClick={() => toggleItem(item.id)}>
                             {item.subtitle}
-                            <span>{openItem === item.id ? '▲' : '▼'}</span>
+                            <span>{openItem === item.id ? ' ▲' : ' ▼'}</span>
                         </button>
                     
                     {openItem === item.id && (

@@ -41,20 +41,16 @@
   position: fixed;
   top: 6vh;
   left: 6vw;
-
+  
   width: 30pt;
   height: 30pt;
   border-radius: 50%;
 
-  background-image: url("./home64.png");
+  background-image: url("assets/home64.png");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/* .homebutton > img {
-} */
-
 
 .navtitle {
   align-self: center;
@@ -88,6 +84,13 @@
 
 
 /* EmergencySection Page */
+
+
+
+
+
+
+
 
 
 
