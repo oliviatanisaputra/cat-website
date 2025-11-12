@@ -16,26 +16,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #EAEBD0;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #EAEBD0;
-}
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
 h2 {
   color: #242424;
 }
+
 
 
 button {
@@ -48,9 +32,10 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: all 0.1s ease; /* smooth animation */
+  background-color: #F4F4F4;
+  color: #242424;
 }
 button:hover {
-  /* border-color: #A4B787; */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 button:focus,
@@ -62,6 +47,31 @@ button:active {
   transform: translateY(1px); /* move slightly down */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset; /* inner shadow */
 }
+
+
+/* cards */
+.cardslist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #F4F4F4;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
 
 
 @media (prefers-color-scheme: light) {

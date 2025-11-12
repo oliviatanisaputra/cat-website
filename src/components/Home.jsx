@@ -1,9 +1,9 @@
 function Home({ onNavigate }) {
     return (
-        <div className="home">
+        <div className="home cardslist">
             <h2 className="pagetitle">무엇을 도와드릴까요?</h2>
 
-            <button onClick={() => onNavigate('catcards')}>
+            <button id="catcards" onClick={() => onNavigate('catcards')}>
                 <div id="icon"></div>
                 <div>
                     <h3>동서대 고양이 카드</h3>

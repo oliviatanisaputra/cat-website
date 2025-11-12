@@ -23,16 +23,18 @@ const CatDictionarySection = () => {
     return (
         <div>
             <h2 className="pagetitle">고양이 사전</h2>
-            <div>
+            <div className="cardslist">
                 {dictionaryItems.map(item => (
-                    <div className="card">
+                    <div className="card dictionaryinfo">
                         <button onClick={() => toggleItem(item.id)}>
-                            {item.subtitle}
-                            <span>{openItem === item.id ? ' ▲' : ' ▼'}</span>
+                            <h3>
+                                {item.subtitle}
+                                <span>{openItem === item.id ? ' ▲' : ' ▼'}</span>
+                            </h3>
                         </button>
                     
                     {openItem === item.id && (
-                        <div>
+                        <div className="dictionaryinfo-info">
                             <p>{item.info}</p>
                         </div>
                     )}
