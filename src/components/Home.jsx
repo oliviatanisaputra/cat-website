@@ -2,6 +2,7 @@ function Home({ onNavigate }) {
     return (
         <div className="home cardslist">
             <h2 className="pagetitle">무엇을 도와드릴까요?</h2>
+            <p className="titledescription"></p>
 
             <button id="catcards" onClick={() => onNavigate('catcards')}>
                 <div id="icon"></div>

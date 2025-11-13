@@ -10,14 +10,14 @@ const CatCardsSection = () => {
             id: 1,
             name: "치즈",
             location: "blabla",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+            description: "설명 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
             img: img1
         },
         {
             id: 2,
             name: "bb",
             location: "blabla",
-            description: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s",
+            description: "설명 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s",
             img: img2
         },
         {
@@ -33,6 +33,7 @@ const CatCardsSection = () => {
     return (
         <div>
             <h2 className="pagetitle">동서대 고양이 카드</h2>
+            <p className="titledescription">동서대학교에서 자주 보이는 고양이들을 소개해드리겠습니다!</p>
             <div className="cardslist">
                 {cats.map((cat) => (
                 // Making card for each cats
@@ -40,7 +41,7 @@ const CatCardsSection = () => {
                         <img src={cat.img} alt="cat pic" className="catcard-img"/>
                         <div className="catcard-info">
                             <h3>{cat.name}</h3>
-                            <p>{cat.location}</p>
+                            <p>장소: {cat.location}</p>
                             <p>{cat.description}</p>
                         </div>
                     </div>
