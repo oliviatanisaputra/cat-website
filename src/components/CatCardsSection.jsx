@@ -115,9 +115,9 @@ const CatCardsSection = () => {
                 {cats.map((cat) => (
                 // Making card for each cats
                     <div key={cat.id} className="card catcard">
+                        <h3>{cat.name}</h3>
                         <img src={cat.img} alt="cat pic" className="catcard-img"/>
                         <div className="catcard-info">
-                            <h3>{cat.name}</h3>
                             {/* <p>{cat.date}</p> */}
                             <p>{cat.description}</p>
                         </div>
