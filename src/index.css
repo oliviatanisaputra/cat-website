@@ -71,7 +71,7 @@ button:active {
 .card {
   width: 80vw;
   max-width: 400px;
-  margin-top: 3vh;
+  margin-bottom: 3vh;
   margin-left: 3vw;
   margin-right: 3vw;
   padding: 3%;
