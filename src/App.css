@@ -24,7 +24,6 @@
 
 /* Navigation Bar */
 .nav {
-  /* padding: 1vh; */
   margin: 0;
   height: 10vh;
   width: 100vw;
@@ -41,9 +40,12 @@
 
 .homebutton {
   /* z-index: 1000; */
-  position: absolute;
-  top: 4vh;
-  left: 4vw;
+  /* position: flex; */
+  margin-left: 3vw;
+  margin-right: auto;
+  /* align-self: flex-start; */
+  /* top: 3vh; */
+  /* left: 3vw; */
   
   width: 40px;
   height: 40px;
@@ -55,14 +57,22 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.navcenter {
+  display: flex;
+  position: absolute;
+  /* flex-direction: row; */
+  align-items: center;
+  /* justify-content: center; */
+}
 .navtitle {
   align-self: center;
   text-align: center;
+
 }
-.nav > img {
+.navcenter > img {
   width: 30pt;
   height: 30pt;
+  /* margin-right: auto; */
 }
 
 

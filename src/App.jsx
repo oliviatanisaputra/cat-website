@@ -37,7 +37,10 @@ function App() {
         // (If it is false(:)) if the view is 'home', just fill up the button with an empty space.
           <div ></div>
         )}
-      <h1 className="navtitle">동서대 고양이</h1><img src={icon} alt="cat icon" />
+      <div className="navcenter">
+        <h1 className="navtitle">동서대 고양이</h1>
+        <img src={icon} alt="cat icon" />
+      </div>
       </header>
 
       <main>
