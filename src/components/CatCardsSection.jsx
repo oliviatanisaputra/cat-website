@@ -109,8 +109,8 @@ const CatCardsSection = () => {
 
     return (
         <div>
-            <h2 className="pagetitle">동서대 고양이 카드</h2>
-            <p className="titledescription">동서대학교에서 자주 보이는 고양이들을 소개해드리겠습니다!</p>
+            <h2 className="pagetitle">동서대학교에서 자주 보이는 고양이들</h2>
+            {/* <p className="titledescription">동서대학교에서 자주 보이는 고양이들을 소개해드리겠습니다!</p> */}
             <div className="cardslist">
                 {cats.map((cat) => (
                 // Making card for each cats

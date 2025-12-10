@@ -7,7 +7,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #242424;
+  /* color: #242424; */
   /* background-color: #242424; */
 
   font-synthesis: none;
@@ -17,14 +17,12 @@
 }
 
 h2 {
-  color: #242424;
+  color: #A4B787;
 }
 /* h3, ol, li, p {
   margin: 0;
 } */
 
-.pagetitle {
-}
 .titledescription {
   margin-top: 2vh;
   margin-bottom: 4vh;

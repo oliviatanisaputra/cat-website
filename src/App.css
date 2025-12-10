@@ -143,12 +143,11 @@
 
 /* CatDictionarySection Page */
 .dictionaryinfo {
-  padding:0%;
+  padding: 0%;
   width: 80vw;
 }
 .dictionaryinfo > button {
   width: 80vw;
-
   background-color: #DA6C6C;
   color: #F4F4F4;
 }
@@ -162,9 +161,12 @@
 
 /* EmergencySection Page */
 .emergencyinfo {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
   /* width: 80vw;
   max-width: 400px; */
-  /* padding: 3%; */
+  padding: 5%;
   background-color: #DA6C6C;
   text-align: justify;
   color: #F4F4F4;
