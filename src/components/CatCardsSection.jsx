@@ -1,6 +1,17 @@
-import img1 from '../assets/goobers.gif'
-import img2 from '../assets/pissedoff.jpg'
-import img3 from '../assets/tongueout.jpg'
+import img1 from '../assets/dingding.png'
+import img2 from '../assets/ttungi.png'
+import img3 from '../assets/jingjing.png'
+import img4 from '../assets/mingming.png'
+import img5 from '../assets/daol.png'
+import img6 from '../assets/yeppi.png'
+import img7 from '../assets/ttalgi.png'
+import img8 from '../assets/meoru.png'
+import img9 from '../assets/dallae.png'
+import img10 from '../assets/aengdu.png'
+import img11 from '../assets/cheri.png'
+import img12 from '../assets/jadu.png'
+import img13 from '../assets/ppotto.png'
+import img14 from '../assets/kkami.png'
 
 // Information of cats in Dongseo University
 
@@ -32,77 +43,77 @@ const CatCardsSection = () => {
             name: "밍밍 (2016.06~)",
             date: "",
             description: "치즈가 약간 묻은 우유고양이. 몸집이 작고 순하다.",
-            img: img1
+            img: img4
         },
         {
             id: 5,
             name: "디올",
             date: "",
             description: "검은색이 주된 카오스 고양이. 사람을 좋아하지 않는다. 학교 안에서 마주쳤다면 운세가 좋은 것!",
-            img: img1
+            img: img5
         },
         {
             id: 6,
             name: "예삐",
             date: "",
             description: "고등어 고양이. 우진 아파트에 주로 거주한다.",
-            img: img1
+            img: img6
         },
         {
             id: 7,
             name: "딸기",
             date: "",
             description: "배가 하얀 구등어 고양이. 사람을 좋아하지 않는다. 글로벌빌리지에 주로 거주한다.",
-            img: img1
+            img: img7
         },
         {
             id: 8,
-            name: "마루 (2018.01~)",
+            name: "머루 (2018.01~)",
             date: "",
             description: "어깨에 문신을 한 고등어 고양이. 사람을 좋아하지 않는다.",
-            img: img1
+            img: img8
         },
         {
             id: 9,
             name: "달래 (2018.01~)",
             date: "",
             description: "귀가 까만 삼색 고양이. 사람을 좋아하지 않는다. 몸집이 작은 편이다.",
-            img: img1
+            img: img9
         },
         {
             id: 10,
             name: "앵두 (2019.06~)",
             date: "",
             description: "콧수염에 커피가 잔뜩묻은 고등어 고양이. 사람을 아주 좋아한다. *현재 심한 구내염을 앓고있다.",
-            img: img1
+            img: img10
         },
         {
             id: 11,
             name: "체리 (2019.06~)",
             date: "",
             description: "코를 조금 흘린 젖소 고양이. 사람을 좋아한다.",
-            img: img1
+            img: img11
         },
         {
             id: 12,
             name: "자두 (성묘 추정)",
             date: "",
             description: "젖소 고양이. 앵두, 체리와 친하다.",
-            img: img1
+            img: img12
         },
         {
-            id: 12,
+            id: 13,
             name: "뽀또 (성묘 추정)",
             date: "",
             description: "치즈 고양이. 친화력이 좋다. 글로벌빌리지 건물에서 자주 출몰한다.",
-            img: img1
+            img: img13
         },
         {
-            id: 12,
+            id: 14,
             name: "까미",
             date: "",
             description: "털이 전체적으로 까맣고 어린 고양이. 사람을 좋아하나, 여기저기 돌아다닌다.",
-            img: img1
+            img: img14
         },
     ];
 
