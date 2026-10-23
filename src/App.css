@@ -1,7 +1,8 @@
 #root {
-  /* max-width: 1280px; */
   margin: 0px;
   padding: 0px;
+  width: 100%;
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -16,32 +17,48 @@
   min-height: 100vh;
   width: 100vw;
 
-  background-color: #EAEBD0;
+  background-color: var(--bg);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-body);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.pagetitle {
+  font-size: 1.6rem;
+  color: var(--ink);
+  
 }
 
 
-/* Navigation Bar */
+/* ----- Navigation Bar ----- */
 .nav {
   margin: 0;
   height: 10vh;
   width: 100vw;
 
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
 
-  background-color: #A4B787;
-  color: #F4F4F4;
+  background-color: var(--coral);
+  color: var(--bg);
   line-height: 1.1;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.homebutton {
+.backhome {
   /* z-index: 1000; */
   /* position: flex; */
-  margin-left: 3vw;
+  margin-left: 5vw;
   margin-right: auto;
   /* align-self: flex-start; */
   /* top: 3vh; */
@@ -49,7 +66,8 @@
   
   width: 40px;
   height: 40px;
-  background-color: #EAEBD0;
+  background-color: var(--bg);
+  /* color: var(--ink); */
   border-radius: 50%;
   
   background-image: url("assets/home64.png");
@@ -63,119 +81,286 @@
   /* flex-direction: row; */
   align-items: center;
   /* justify-content: center; */
+  gap: 0.5rem;
+  
 }
 .navtitle {
   align-self: center;
   text-align: center;
-
+  font-size: 28px;
+  font-family: var(--font-title);
+  margin-top: 5%;
+  margin-bottom: 0;
+  height: 100%;
 }
-.navcenter > img {
-  width: 30pt;
-  height: 30pt;
+.navcenter img {
+  width: 34px;
+  height: 34px;
   /* margin-right: auto; */
 }
 
 
 
-/* Home Page */
+/* ----- Home Page ----- */
 .home {
   padding: 0;
-  /* margin: 1rem; */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: space-between;
+  gap: 0.8rem;
+  max-width: 520px;
 }
 
-.home > button {
+.homebutton {
   margin: 1rem;
   width: 70vw;
+  /* min-width: 50vw; */
+  max-width: 600px;
   height: auto;
-
-  background-color: #DA6C6C;
-  color: #F4F4F4;
+  /* gap: 0.875rem; */
+  padding: 0 1.1rem;
+  background-color: var(--green-soft);
+  color: var(--green);
+  font-family: var(--font-title);
+  /* border: 1px solid var(--line); */
+  border-radius: var(--radius);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.emergency {
+  background-color: var(--coral);
+  color: var(--coral-soft);
+}
+.homebutton:hover{
+  background-color: var(--green);
+  color: var(--green-soft);
+}
+.emergency:hover {
+  background-color: var(--coral-soft);
+  color: var(--coral);
 }
 
 
 
-/* CatCardsSection Page */
+/* ----- CatCardsSection Page ----- */
+.catgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem 1.25rem;
+  justify-items: center;
+}
+ 
 .catcard {
-  height: 50vh;
-  width: 70vw;
-  max-width: 250px;
-  /* max-height: 20%; */
-  /* max-width: 80%; */
-
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
   flex-direction: column;
-  align-content: center;
+  overflow: hidden;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+ 
+/* the little hole for the lanyard */
+.card-slot {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: var(--bg);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.card-header {
+  display: flex;
   align-items: center;
-  
-  background-color: #DA6C6C;
-  color: #F4F4F4;
+  gap: 0.5rem;
+  padding: 1.4rem 1rem 0.6rem;
+  background-color: var(--green);
+  color: #FFFDF5;
 }
-
-.catcard-img {
-  height: 100%;
-  max-height: 30vh;
-  width: 80%;
-  border-radius: 8px;
+.card-header img {
+  width: 28px;
+  height: 28px;
+}
+/* .card-header {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  line-height: 1.1;
+} */
+.card-headnote {
+  margin-left: auto;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  color: var(--green-soft);
+}
+ 
+.card-main {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 0.5rem;
+}
+ 
+.card-img {
+  flex-shrink: 0;
+  width: 120px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border: 3px solid #F4F4F4;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  background-color: var(--green-soft);
 }
-.catcard-info {
-  /* margin-left: 2%; */
-  text-align: center;
-  font-size: 0.9em;
-  line-height: 1.3;
-}
-.catcard > h3 {
-  /* margin-top: 0;
-  margin-bottom: 0; */
+ 
+.card-fields {
   margin: 0;
-  padding: 0;
-  /* color: #EAEBD0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  min-width: 0;
 }
-.catcard > h3, p {
+.card-fields dt {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.card-fields dd {
   margin: 0;
-  padding: 0;
+  font-size: 1rem;
+}
+.card-name {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--green);
+}
+ 
+.card-desc {
+  margin: 0 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px dashed var(--line);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+.card-desc b {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+ 
+/* barcode strip */
+.barcode {
+  height: 30px;
+  margin: 0.2rem 1.25rem 1.25rem;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ink) 0 2px, transparent 2px 4px,
+    var(--ink) 4px 5px, transparent 5px 8px,
+    var(--ink) 8px 11px, transparent 11px 13px
+  );
+  opacity: 0.8;
+}
+
+footer {
+  margin-top: 10px;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--muted);
 }
 
 
-/* CatDictionarySection Page */
+/* ----- CatDictionarySection Page ----- */
+.cardlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  align-content: center;
+  align-self: center;
+}
+
 .dictionaryinfo {
-  padding: 0%;
-  width: 80vw;
+  background-color: var(--green-soft);
+  /* border: 1px solid var(--line); */
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* max-width: inherit; */
+  padding: 0;
+  margin: 0;
 }
-.dictionaryinfo > button {
-  width: 80vw;
-  background-color: #DA6C6C;
-  color: #F4F4F4;
+
+.dictionaryinfo p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.dictionaryinfo-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.1rem;
+  text-align: left;
+  background: none;
+  /* font-family: var(--font-title); */
+  /* font-size: 1.15rem; */
+  color: var(--green-soft);
+  background-color: var(--green);
+}
+.dictionaryinfo-button:hover {
+  background-color: var(--green-soft);
+  color: var(--green);
+}
+.chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.chevron.open {
+  transform: rotate(180deg);
 }
 .dictionaryinfo-info {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  padding: 0.25rem 1.1rem 1.1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
   text-align: justify;
 }
+.dictionaryinfo-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
 
-
-/* EmergencySection Page */
+/* ----- EmergencySection Page ----- */
 .emergencyinfo {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  /* width: 80vw;
-  max-width: 400px; */
-  padding: 5%;
-  background-color: #DA6C6C;
+  margin: 1.2rem auto;
+  padding: 1.2rem 1.3rem 1.4rem;
+  max-width: 600px;
   text-align: justify;
-  color: #F4F4F4;
+  background-color: var(--coral-soft);
+  border-left: 6px solid var(--coral);
+  border-radius: var(--radius);
 }
 .emergencyinfo > h3 {
   margin: 0;
   padding: 0;
   width: 100%;
-  color: #EAEBD0;
+  color: var(--coral);
+  font-family: var(--font-title);
 }
 .emergencyinfo > ol, li {
   margin: 0 0 0 3%;

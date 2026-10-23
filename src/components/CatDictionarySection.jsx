@@ -21,7 +21,7 @@ const CatDictionarySection = () => {
         {
             id: 3,
             subtitle: "고양이에게 해로운 음식",
-            info: "양파, 마늘 (적혈구 파괴로 빈혈 유발); 초콜릿, 커피 (카페인·테오브로민 독성); 생선 가시, 닭뼈 (소화기관 손상 가능); 우유	(유당불내증으로 설사 유발); 짠 음식, 라면, 햄 등 (나트륨 과다로 신장에 해로움 포도, 건포도 신장 손상 가능)"
+            info: "양파, 마늘 (적혈구 파괴로 빈혈 유발); 초콜릿, 커피 (카페인·테오브로민 독성); 생선 가시, 닭뼈 (소화기관 손상 가능); 우유 (유당불내증으로 설사 유발); 짠 음식, 라면, 햄 등 (나트륨 과다 섭취 주의); 포도, 건포도 (신장 손상 가능)"
         },
         {
             id: 4,
@@ -33,29 +33,41 @@ const CatDictionarySection = () => {
     return (
         <div>
             <h2 className="pagetitle">고양이 사전</h2>
-            <div className="cardslist">
-                {dictionaryItems.map(item => (
-                    <div className="card dictionaryinfo">
-                        <button onClick={() => toggleItem(item.id)}>
-                            <h3>
-                                {item.subtitle}
-                                <span>{openItem === item.id ? '  ▲' : '  ▼'}</span>
-                            </h3>
-                        </button>
-                    
-                    {openItem === item.id && (
-                        <div className="dictionaryinfo-info">
-                            <p>{item.id === 2 || item.id === 3
-                            ? item.info.split(';').map((part, index) => (
-                                <span key={index}>
-                                    {index > 0 && <br />}{part.trim()}
-                                </span>
-                            ))
-                            : item.info}</p>
+            <div className="cardlist">
+                {dictionaryItems.map(item => {
+                    const isOpen = openItem === item.id;
+
+                    return (
+                        <div className="dictionaryinfo">
+                            <p>
+                                <button
+                                    className="dictionaryinfo-button"
+                                    onClick={() => toggleItem(item.id)}
+                                    aria-expanded={isOpen}>
+                                <span>{item.subtitle}</span>
+                                <span className={`chevron ${isOpen ? 'open' : ''}`} aria-hidden="true">▼</span>
+                                </button>
+                            </p>
+                        
+                        {isOpen && (
+                            <div className="dictionaryinfo-info">
+                                {item.id === 2 || item.id === 3
+                                    ? (
+                                        <ul>
+                                            {item.info.split(';').map((part, index) => (
+                                                <li key={index}>
+                                                    {part.trim()}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>{item.info}</p>
+                                    )}
+                                </div>
+                            )}
                         </div>
-                    )}
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     )

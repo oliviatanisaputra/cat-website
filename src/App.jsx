@@ -32,7 +32,7 @@ function App() {
       <header className="nav">
         {view !== 'home' ? (
         // If the view is not 'home' (if it is true(?)), make a button to go back to 'home' (the previous page).
-          <button onClick={() => setView('home')} className="homebutton"></button>
+          <button onClick={() => setView('home')} className="backhome"></button>
         ) : (
         // (If it is false(:)) if the view is 'home', just fill up the button with an empty space.
           <div ></div>

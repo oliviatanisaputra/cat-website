@@ -4,7 +4,7 @@ function Home({ onNavigate }) {
             <h2 className="pagetitle">무엇을 도와드릴까요?</h2>
             {/* <p className="titledescription"></p> */}
 
-            <button id="catcards" onClick={() => onNavigate('catcards')}>
+            <button className="homebutton" id="catcards" onClick={() => onNavigate('catcards')}>
                 <div id="icon"></div>
                 <div>
                     <h3>동서대 고양이 카드</h3>
@@ -12,7 +12,7 @@ function Home({ onNavigate }) {
                 </div>
             </button>
             
-            <button onClick={() => onNavigate('dictionary')}>
+            <button className="homebutton" onClick={() => onNavigate('dictionary')}>
                 <div id="icon"></div>
                 <div>
                     <h3>고양이 사전</h3>
@@ -20,7 +20,7 @@ function Home({ onNavigate }) {
                 </div>
             </button>
             
-            <button onClick={() => onNavigate('emergency')}>
+            <button className="homebutton emergency" onClick={() => onNavigate('emergency')}>
                 <div id="icon"></div>
                 <div>
                     <h3>비상 상황 발생 시</h3>
